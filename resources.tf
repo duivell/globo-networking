@@ -19,6 +19,7 @@ locals {
   common_tags = {
     Environment = var.environment
     BillingCode = var.billing_code
+    Workspace   = terraform.workspace
   }
 }
 
@@ -60,5 +61,5 @@ resource "aws_security_group" "ingress" {
   revoke_rules_on_delete = null
   tags                   = {}
   tags_all               = {}
-  vpc_id                 = "vpc-0b35c6f367fa50d88"
+  vpc_id                 = "vpc-0cdabc12aa1863700"
 }
